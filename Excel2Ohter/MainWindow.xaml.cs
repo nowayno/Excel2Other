@@ -22,7 +22,7 @@ namespace Excel2Ohter
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }
