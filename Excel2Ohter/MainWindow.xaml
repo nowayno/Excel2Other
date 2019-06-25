@@ -8,7 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Click="Button_Click" Content="Button" HorizontalAlignment="Left" Margin="75,162,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="textBox1" HorizontalAlignment="Left" Height="191" Margin="324,76,0,0" Text="TextBox" VerticalAlignment="Top" Width="304" TextWrapping="Wrap"/>
+        <TextBox Name="textBox1" HorizontalAlignment="Left" Height="191" Margin="324,76,0,0" Text="TextBox" VerticalAlignment="Top" Width="175" TextWrapping="Wrap"/>
+        <TreeView Name="tree" HorizontalAlignment="Left" Height="307" Margin="569,76,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

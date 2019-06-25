@@ -48,6 +48,26 @@ namespace Excel2Ohter
 
             dic["5"] = dic1;
             textBox1.Text = JsonConvert.SerializeObject(dic);
+
+            //Dictionary<string, object> dic2 = JsonConvert.DeserializeObject<Dictionary<string, object>>(JsonConvert.SerializeObject(dic));
+            JObject j = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dic)) as JObject;
+            foreach (var item in j)
+            {
+                
+                if (item.Value.GetType() == typeof(JObject))
+                {
+                    Console.WriteLine("JObject");
+                }
+                else if (item.Value.GetType() == typeof(JArray))
+                {
+                    Console.WriteLine("JArray");
+                }
+                else
+                {
+                    Console.WriteLine("String");
+                }
+            }
+
         }
     }
 }
