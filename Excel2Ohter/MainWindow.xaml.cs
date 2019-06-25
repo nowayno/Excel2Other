@@ -49,13 +49,14 @@ namespace Excel2Ohter
             dic["5"] = dic1;
             textBox1.Text = JsonConvert.SerializeObject(dic);
 
+            string json = "{\"1\":[],\"2\":\"www\",\"3\":{\"1\":[],\"2\":\"www\"}}";
             //Dictionary<string, object> dic2 = JsonConvert.DeserializeObject<Dictionary<string, object>>(JsonConvert.SerializeObject(dic));
-            JObject j = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dic)) as JObject;
+            JObject j = JsonConvert.DeserializeObject(json) as JObject;
             foreach (var item in j)
             {
                 
                 if (item.Value.GetType() == typeof(JObject))
-                {
+                {//JObject需要继续分析
                     Console.WriteLine("JObject");
                 }
                 else if (item.Value.GetType() == typeof(JArray))
